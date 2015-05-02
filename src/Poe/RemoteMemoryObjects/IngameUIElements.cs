@@ -78,123 +78,67 @@ namespace PoeHUD.Poe.RemoteMemoryObjects
             get { return ReadObjectAt<Element>(4 + 0xF0); }
         }
 
-        public Element InventoryPanel
-        {
-            get { return ReadObjectAt<Element>(12 + 0xF4); }
-        }
-
-        public Element StashPanel
-        {
-            get { return ReadObjectAt<Element>(12 + 0xF8); }
-        }
-
-        public Element SocialPanel
-        {
-            get { return ReadObjectAt<Element>(12 + 0x104); }
-        }
-
-        public Element TreePanel
-        {
-            get { return ReadObjectAt<Element>(12 + 0x108); }
-        }
-
-        public Element CharacterPanel
-        {
-            get { return ReadObjectAt<Element>(12 + 0x10C); }
-        }
-
-        public Element OptionsPanel
-        {
-            get { return ReadObjectAt<Element>(12 + 0x110); }
-        }
-
-        public Element AchievementsPanel
-        {
-            get { return ReadObjectAt<Element>(12 + 0x114); }
-        }
-
-        public Element WorldPanel
-        {
-            get { return ReadObjectAt<Element>(12 + 0x11C); }
-        }
-
-        public Map Map
-        {
-            get { return ReadObjectAt<Map>(16 + 0x11C); }
-        }
-
-        public IEnumerable<ItemsOnGroundLabelElement> ItemsOnGroundLabels
-        {
-            get
-            {
-                var itemsOnGroundLabelRoot = ReadObjectAt<ItemsOnGroundLabelElement>(16 + 0x120);
-                return itemsOnGroundLabelRoot.Children;
-            }
-        }
-
-        public List<HPbarElement> MonsterHpLabels
-        {
-            get
-            {
-                var monsterHpLabelsRoot = ReadObjectAt<HPbarElement>(4 + 0x124);
-                return monsterHpLabelsRoot.Children;
-            }
-        }
-
-        public Element Buffs
-        {
-            get { return ReadObjectAt<Element>(4 + 0x130); }
-        }
-
-        public Element Buffs2
-        {
-            get { return ReadObjectAt<Element>(4 + 0x18c); }
-        }
-
-        public Element OpenLeftPanel
-        {
-            get { return ReadObjectAt<Element>(16 + 0x154); }
-        }
-
-        public Element OpenRightPanel
-        {
-            get { return ReadObjectAt<Element>(16 + 0x158); }
-        }
-
-        public Element OpenNpcDialogPanel
-        {
-            get { return ReadObjectAt<Element>(4 + 0x160); }
-        }
-
-        public Element CreatureInfoPanel
-        {
-            get { return ReadObjectAt<Element>(4 + 0x184); }
-        } // above, it shows name and hp
-
-        public Element InstanceManagerPanel
-        {
-            get { return ReadObjectAt<Element>(4 + 0x198); }
-        }
-
-        public Element InstanceManagerPanel2
-        {
-            get { return ReadObjectAt<Element>(4 + 0x19C); }
-        }
-
-        // dunno what it is
-        public Element SwitchingZoneInfo
-        {
-            get { return ReadObjectAt<Element>(0x1C8); }
-        }
-
-        public Element GemLvlUpPanel
-        {
-            get { return ReadObjectAt<Element>(20 + 0x1F8); }
-        }
-
-        public ItemOnGroundTooltip ItemOnGroundTooltip
-        {
-            get { return ReadObjectAt<ItemOnGroundTooltip>(20 + 0x208); }
-        }
-    }
-}
+               public Element InventoryPanel
+         {
+-            get { return ReadObjectAt<Element>(12 + 0xF4); }
++            get { return ReadObjectAt<Element>(12 + 0xF8); }
+         }
+ 
+         public Element StashPanel
+@@ -95,7 +95,7 @@ public Element SocialPanel
+ 
+         public Element TreePanel
+         {
+-            get { return ReadObjectAt<Element>(12 + 0x108); }
++            get { return ReadObjectAt<Element>(12 + 0x10C); }
+         }
+ 
+         public Element CharacterPanel
+@@ -120,14 +120,14 @@ public Element WorldPanel
+ 
+         public Map Map
+         {
+-            get { return ReadObjectAt<Map>(16 + 0x11C); }
++            get { return ReadObjectAt<Map>(16 + 0x120); }
+         }
+ 
+         public IEnumerable<ItemsOnGroundLabelElement> ItemsOnGroundLabels
+         {
+             get
+             {
+-                var itemsOnGroundLabelRoot = ReadObjectAt<ItemsOnGroundLabelElement>(16 + 0x120);
++                var itemsOnGroundLabelRoot = ReadObjectAt<ItemsOnGroundLabelElement>(16 + 0x124);
+                 return itemsOnGroundLabelRoot.Children;
+             }
+         }
+@@ -153,12 +153,12 @@ public Element Buffs2
+ 
+         public Element OpenLeftPanel
+         {
+-            get { return ReadObjectAt<Element>(16 + 0x154); }
++            get { return ReadObjectAt<Element>(16 + 0x158); }
+         }
+ 
+         public Element OpenRightPanel
+         {
+-            get { return ReadObjectAt<Element>(16 + 0x158); }
++            get { return ReadObjectAt<Element>(16 + 0x15c); }
+         }
+ 
+         public Element OpenNpcDialogPanel
+@@ -189,12 +189,12 @@ public Element SwitchingZoneInfo
+ 
+         public Element GemLvlUpPanel
+         {
+-            get { return ReadObjectAt<Element>(20 + 0x1F8); }
++            get { return ReadObjectAt<Element>(20 + 0x1FC); }
+         }
+ 
+         public ItemOnGroundTooltip ItemOnGroundTooltip
+         {
+-            get { return ReadObjectAt<ItemOnGroundTooltip>(20 + 0x208); }
++            get { return ReadObjectAt<ItemOnGroundTooltip>(20 + 0x20C); }
+         }
+     }
+ }
+\ No newline at end of file
